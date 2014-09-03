@@ -20,6 +20,8 @@ body {
     margin: 0;
     width: 100%;
     overflow: hidden;
+    min-height: 500px;
+    height: 500px;
 }
 a, img {
     -webkit-touch-callout: none;
@@ -36,6 +38,8 @@ a, img {
     background-position: center;
     overflow: hidden;
     text-align: center;
+    min-height: 500px;
+    height: 500px;
     #logo {
         position: relative;
         margin: 0 auto;
@@ -52,6 +56,16 @@ a, img {
             position: relative;
             left: 30%;
             opacity: 0.4;
+        }
+    }
+    ul.menu {
+        list-style-type: none;
+        margin-bottom: 0;
+        position: relative;
+        top: 370px;
+        li {
+            display: inline-block;
+            margin-left: 45px;
         }
     }
 }
