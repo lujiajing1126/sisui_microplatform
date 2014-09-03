@@ -25,6 +25,7 @@ body {
 }
 a, img {
     -webkit-touch-callout: none;
+    -webkit-user-select: none;
 }
 .sisu {
     width: 100%;
@@ -66,6 +67,40 @@ a, img {
         li {
             display: inline-block;
             margin-left: 45px;
+        }
+    }
+    ul.share-menu {
+        list-style-type: none;
+        margin-bottom: 0;
+        position: relative;
+        li {
+            position: relative;
+            display: inline-block;
+            opacity: 0.5;
+            &.hidden-item {
+                opacity: 0;
+            }
+            a {
+                img {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+            &#weixin {
+                top: -60px;
+                left: 120px;
+                -webkit-transition: all 0.5s ease 0s;
+            }
+            &#renren {
+                top: -160px;
+                left: 150px;
+                -webkit-transition: all 0.5s ease 0.2s;
+            }
+            &#weibo {
+                top: -220px;
+                left: 130px;
+                -webkit-transition: all 0.5s ease 0.4s;
+            }
         }
     }
 }
