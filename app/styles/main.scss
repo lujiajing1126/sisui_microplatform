@@ -1,0 +1,62 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+// bower:scss
+@import "../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+* {
+    border: 0;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+html {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: 0;
+    overflow: hidden;
+}
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+}
+a, img {
+    -webkit-touch-callout: none;
+}
+.sisu {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: 0;
+    background-image: url(../images/01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    text-align: center;
+    #logo {
+        position: relative;
+        margin: 0 auto;
+        top: 33%;
+        img {
+            -webkit-animation: ani-sec1-swlogo 1s ease 0 1 alternate forwards;
+            -webkit-backface-visibility: hidden;
+        }
+    }
+    .share {
+        position: relative;
+        top: 20%;
+        img {
+            position: relative;
+            left: 30%;
+            opacity: 0.4;
+        }
+    }
+}
+// animation
+@-webkit-keyframes ani-sec1-swlogo{
+    0% {-webkit-transform:rotateY(180deg);}
+    100% {-webkit-transform:rotateY(0deg);}
+}
