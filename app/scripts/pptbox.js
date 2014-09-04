@@ -30,7 +30,7 @@ $(function() {
 		}
 	};
 
-	$(document).on("click", "[data-xx-action]", function(event) {
+	$(document).on("touchend", "[data-xx-action]", function(event) {
 		event = event || window.event;
 		event.preventDefault();
 		var actionName = $(this).attr("data-xx-action"),
