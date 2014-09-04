@@ -190,7 +190,7 @@ html, body {
 	width: 100%;
 	height: 32px;
 	position: fixed;
-	z-index: 100;
+	z-index: 1000;
 	margin: 0 auto;
 	left: 0;
 	.btn-controller {
@@ -218,6 +218,7 @@ html, body {
 }
 .flit {
 	-webkit-animation: flit 1s ease 0 1 alternate forwards;
+	-webkit-backface-visibility: hidden;
 }
 @-webkit-keyframes flit {
 	0% {
