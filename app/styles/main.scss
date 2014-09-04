@@ -46,6 +46,7 @@ a, img {
         position: relative;
         margin: 0 auto;
         top: 33%;
+        z-index: 99;
         img {
             -webkit-animation: ani-sec1-swlogo 1s ease 0 1 alternate forwards;
             -webkit-backface-visibility: hidden;
@@ -54,17 +55,24 @@ a, img {
     .share {
         position: relative;
         top: 20%;
+        height: 78px;
+        z-index: 100;
         img {
+            display: inline-block;
+            width: 81px;
+            height: 78px;
             position: relative;
             left: 30%;
             opacity: 0.4;
+            z-index: 100;
         }
     }
     ul.menu {
         list-style-type: none;
         margin-bottom: 0;
         position: relative;
-        top: 370px;
+        top: 35%;
+        z-index: 99;
         li {
             display: inline-block;
             margin-left: 45px;
@@ -74,6 +82,7 @@ a, img {
         list-style-type: none;
         margin-bottom: 0;
         position: relative;
+        z-index: 99;
         li {
             position: relative;
             display: inline-block;
