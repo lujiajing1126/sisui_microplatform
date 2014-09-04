@@ -1,5 +1,8 @@
 $(function(){
 	'use strict';
+	var ua = window.navigator.userAgent,
+		iPhoneUA = /iPhone/i;
+	console.log(""+ua);
 	$('html').height($(window).height());
 	$('body').height($(window).height());
 	$('body > .sisu').height($(window).height());
@@ -10,8 +13,7 @@ $(function(){
 		else
 			$('.share-menu-item').addClass('hidden-item');
 	});
-	var SHAKE_THRESHOLD = 800,
-		last_update = 0,
+	var last_update = 0,
 		sisuLogo = $('div#logo'),
 		deviceMotionHandler = function(evt) {
 			var acceleration = evt.accelerationIncludingGravity,
@@ -19,8 +21,14 @@ $(function(){
 			if ((curTime - last_update) > 50) {
 				var diffTime = curTime - last_update,
 					OffsetX = acceleration.x * 5;
+				if (iPhoneUA.test(ua)) {
+					OffsetX = -OffsetX;
+				}
 				last_update = curTime;
-				sisuLogo.css({left:OffsetX+'px'})
+				//console.log(acceleration.x);
+				if (Math.abs(acceleration.x) > 0.2) {
+					sisuLogo.css({left:OffsetX+'px'});
+				}
 	        }
 		};
 	if (window.DeviceMotionEvent) {
