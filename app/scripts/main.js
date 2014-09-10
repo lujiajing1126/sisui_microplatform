@@ -44,9 +44,6 @@ $(function(){
 				}
 	        }
 		};
-	if (window.DeviceMotionEvent) {
-		window.addEventListener('devicemotion',deviceMotionHandler, false);  
-    }
     if(isIPHONE5noMicroMessage || isIPHONE5inMicroMessage) {
     	$('#weixin').css({top:'-75px'});
     	$('#renren').css({top:'-170px',left:'160px'});
@@ -57,4 +54,11 @@ $(function(){
     	$('#renren').css({top:'-180px',left:'170px'});
     	$('#weibo').css({top:'-255px',left:'165px'});
     }
+    $('#logo').parallax({
+    	scalarX: 13,
+  		scalarY: 13
+  	});
+    setTimeout(function(){
+    	$('#logo > img').removeClass('animation');
+    },1000);
 });

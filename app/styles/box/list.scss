@@ -1,0 +1,48 @@
+body.list > div.box-wrapper {
+	overflow: auto;
+	height: auto;
+	min-height: 600px;
+}
+.title-wrapper {
+	height: 50px;
+	background: #EBEBEB;
+	padding-left: 15px;
+	.title-item {
+		color: #949494;
+		line-height: 50px;
+		font-size: 30px;
+	}
+}
+.list-wrapper {
+	ul.list-wrapper-list {
+		list-style-type: none;
+		li.list-wrapper-item {
+			padding-left: 15px;
+			height: 100px;
+			display: block;
+			border-bottom: 1px solid #DADADA;
+			span.title {
+				float: left;
+				display: inline-block;
+				line-height: 100px;
+				font-size: 30px;
+				margin-left: 15px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+		}
+		margin-bottom: 0px;
+	}
+}
+span.logo {
+	border-radius: 10px;
+	display: inline-block;
+	margin-top: 10px;
+	height: 80px;
+	width: 80px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	float: left;	
+}

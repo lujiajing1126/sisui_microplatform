@@ -2,6 +2,7 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 // bower:scss
 @import "../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 @import "./box/pptbox.scss";
+@import "./box/list.scss";
 // endbower
 * {
     border: 0;
@@ -47,9 +48,13 @@ a, img {
         margin: 0 auto;
         top: 33%;
         z-index: 99;
+        text-align: center;
         img {
-            -webkit-animation: ani-sec1-swlogo 1s ease 0 1 alternate forwards;
+            margin: 0 auto;
             -webkit-backface-visibility: hidden;
+            &.animation {
+                -webkit-animation: ani-sec1-swlogo 1s ease 0 1 alternate forwards;
+            }
         }
     }
     .share {
