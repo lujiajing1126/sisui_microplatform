@@ -1,0 +1,43 @@
+2014-09-22 12:54:34: (log.c.164) server started 
+2014-09-22 14:00:32: (mod_proxy.c.1021) establishing connection failed: Connection refused 
+2014-09-22 14:00:32: (mod_proxy.c.921) proxy-server disabled: 127.0.0.1 9000 13 
+2014-09-22 14:00:32: (mod_proxy.c.1329) no proxy-handler found for: /list.html 
+2014-09-22 14:00:33: (mod_proxy.c.1021) establishing connection failed: Connection refused 
+2014-09-22 14:00:33: (mod_proxy.c.921) proxy-server disabled: 127.0.0.1 9000 13 
+2014-09-22 14:00:33: (mod_proxy.c.1329) no proxy-handler found for: /favicon.ico 
+2014-09-22 14:00:37: (mod_proxy.c.1374) proxy - re-enabled: 127.0.0.1 9000 
+2014-09-22 14:00:38: (mod_proxy.c.1374) proxy - re-enabled: 127.0.0.1 9000 
+2014-09-22 14:43:13: (mod_proxy.c.1021) establishing connection failed: Connection refused 
+2014-09-22 14:43:13: (mod_proxy.c.921) proxy-server disabled: 127.0.0.1 9000 8 
+2014-09-22 14:43:13: (mod_proxy.c.1329) no proxy-handler found for: /events.html 
+2014-09-22 14:43:14: (mod_proxy.c.1329) no proxy-handler found for: /events.html 
+2014-09-22 14:43:15: (mod_proxy.c.1329) no proxy-handler found for: /events.html 
+2014-09-22 14:43:18: (mod_proxy.c.1374) proxy - re-enabled: 127.0.0.1 9000 
+2014-09-22 14:43:30: (mod_proxy.c.1021) establishing connection failed: Connection refused 
+2014-09-22 14:43:30: (mod_proxy.c.921) proxy-server disabled: 127.0.0.1 9000 8 
+2014-09-22 14:43:30: (mod_proxy.c.1329) no proxy-handler found for: /events.html 
+2014-09-22 14:43:35: (mod_proxy.c.1374) proxy - re-enabled: 127.0.0.1 9000 
+2014-09-22 16:07:40: (mod_proxy.c.1021) establishing connection failed: Connection refused 
+2014-09-22 16:07:40: (mod_proxy.c.921) proxy-server disabled: 127.0.0.1 9000 8 
+2014-09-22 16:07:40: (mod_proxy.c.1329) no proxy-handler found for: /events.html 
+2014-09-22 16:07:41: (mod_proxy.c.1329) no proxy-handler found for: /events.html 
+2014-09-22 16:07:45: (mod_proxy.c.1374) proxy - re-enabled: 127.0.0.1 9000 
+2014-09-22 17:34:12: (server.c.1442) [note] graceful shutdown started 
+2014-09-22 17:34:12: (server.c.1558) server stopped by UID = 501 PID = 451 
+2014-09-22 17:34:17: (log.c.164) server started 
+2014-09-22 17:35:08: (mod_proxy.c.1021) establishing connection failed: Connection refused 
+2014-09-22 17:35:08: (mod_proxy.c.921) proxy-server disabled: 127.0.0.1 9000 8 
+2014-09-22 17:35:08: (mod_proxy.c.1329) no proxy-handler found for: /events.html 
+2014-09-22 17:35:13: (mod_proxy.c.1374) proxy - re-enabled: 127.0.0.1 9000 
+2014-09-22 17:44:25: (mod_proxy.c.1021) establishing connection failed: Connection refused 
+2014-09-22 17:44:25: (mod_proxy.c.921) proxy-server disabled: 127.0.0.1 9000 8 
+2014-09-22 17:44:25: (mod_proxy.c.1329) no proxy-handler found for: /events.html 
+2014-09-22 17:44:30: (mod_proxy.c.1374) proxy - re-enabled: 127.0.0.1 9000 
+2014-09-22 21:23:10: (server.c.1442) [note] graceful shutdown started 
+2014-09-22 21:23:10: (server.c.1558) server stopped by UID = 501 PID = 451 
+2014-09-22 22:41:44: (log.c.164) server started 
+2014-09-22 22:42:58: (server.c.1442) [note] graceful shutdown started 
+2014-09-22 22:42:58: (server.c.1558) server stopped by UID = 501 PID = 451 
+2014-09-22 22:42:59: (log.c.164) server started 
+2014-09-22 23:47:07: (server.c.1442) [note] graceful shutdown started 
+2014-09-22 23:47:07: (server.c.1558) server stopped by UID = 501 PID = 451 

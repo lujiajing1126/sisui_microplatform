@@ -1,0 +1,269 @@
+//社团类型图标
+.org-type-icon-wrapper {
+	position: absolute;
+	z-index: 7;
+	.org-type-icon {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		// border-top-right-radius: 5px;
+		// border-bottom-right-radius: 5px;
+		//学术类
+		&.academic {
+			background-color: rgba(238, 77, 77, .8);
+		}
+		&.academic:before {
+			border-color: rgba(238, 77, 77, .8);
+			color: rgba(238, 77, 77, .8);
+		}
+		&.academic:after {
+			content: "学";
+		}
+		//艺术类
+		&.arts {
+			background-color: rgba(238, 77, 183, .8);
+		}
+		&.arts:before {
+			border-color: rgba(238, 77,183, .8);
+			color: rgba(238, 77, 183, .8);
+		}
+		&.arts:after {
+			content: "艺";
+		}
+		//体育类
+		&.sports {
+			background-color: rgba(76, 194, 237,.8);
+		}
+		&.sports:before {
+			border-color: rgba(76, 194, 237,.8);
+			color: rgba(76, 194, 237,.8);
+		}
+		&.sports:after {
+			content: "体";
+		}
+		//实践类
+		&.practice {
+			background-color: rgba(76, 194, 237, .8);
+		}
+		&.practice:before {
+			border-color: rgba(76, 194, 237, .8);
+			color: rgba(76, 194, 237, .8);
+		}
+		&.practice:after {
+			content: "践";
+		}
+		//公益类
+		&.public {
+			background-color: rgba(76, 237, 143, .8);
+		}
+		&.public:before {
+			border-color: rgba(76, 237, 143, .8);
+			color: rgba(76, 237, 143, .8);
+		}
+		&.public:after {
+			content: "益";
+		}
+		//其他类
+		&.else {
+			background-color: rgba(140, 140, 140, .8);
+		}
+		&.else:before {
+			border-color: rgba(140, 140, 140, .8);
+			color: rgba(140, 140, 140, .8);
+		}
+		&.else:after {
+			content: "其";
+		}
+		//交友
+		&.dating{
+			background-color: rgba(238, 77, 77, .8);
+		}
+		&.dating:before{
+			border-color: rgba(238, 77, 77, .8);
+			color: rgba(238, 77, 77, .8);
+		}
+		&.dating:after{
+			content: "友";
+		}
+
+	}
+	.org-type-icon:before {
+		content: "";
+		position: absolute;
+		top: 0;
+	}
+	.org-type-icon:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		text-align: center;
+		color: #fff;
+	}
+	&.right-top {
+		right: 0;
+		top: 0;
+	}
+	&.right-bottom {
+		right: 0;
+		bottom: 0;
+	}
+	&.right-bottom-10 {
+		right: 0;
+		bottom: 10px;
+	}
+	&.right-bottom-20 {
+		right: 0;
+		bottom: 20px;
+	}
+	&.width30 {
+		width: 30px;
+		height: 30px;
+		.org-type-icon:before {
+			right: 30px;
+			height: 30px;
+			border-right: 10px solid;
+			border-top: 15px solid transparent;
+			border-bottom: 15px solid transparent;
+		}
+		.org-type-icon:after {
+			height: 30px;
+			line-height: 30px;
+			width: 30px;
+			font-size: 12px;
+		}
+	}
+	&.width20 {
+		width: 20px;
+		height: 20px;
+		.org-type-icon:before {
+			right: 20px;
+			height: 20px;
+			border-right: 10px solid;
+			border-top: 10px solid transparent;
+			border-bottom: 10px solid transparent;
+		}
+		.org-type-icon:after {
+			height: 20px;
+			line-height: 20px;
+			width: 20px;
+			font-size: 12px;
+		}
+	}
+}
+
+/* * 活动类型的标识* */
+.type-wrapper {
+	width: 30px;
+	border-radius: 3px;
+	position: relative;
+	text-align: center;
+	line-height: 30px;
+	height: 30px;
+	display: inline-block;
+	color: #fff;
+	font-size: 14px;
+	right:0;
+}
+.type-wrapper .square {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 30px;
+	height: 100%;
+	// border-top-left-radius: 5px;
+	// border-top-right-radius: 5px;
+}
+.type-wrapper .triangle {
+	position: absolute;
+	z-index: 7;
+	bottom: -11px;
+	border-bottom: 12px solid transparent;
+}
+.type-wrapper .triangle.left {
+	left: 0;
+	border-left-width: 20px;
+	border-left-style: solid;
+	border-bottom-left-radius: 5px;
+}
+.type-wrapper .triangle.right {
+	right: 0;
+	border-right-width: 20px;
+	border-right-style: solid;
+	border-bottom-right-radius: 5px;
+}
+
+/* 讲座 */
+.type-wrapper.lecture .square {
+	background-color: #ee4d4d;
+}
+.type-wrapper.lecture .triangle {
+	border-left-color: #ee4d4d;
+	border-right-color: #ee4d4d;
+}
+
+/* 演出 */
+.type-wrapper.show .square {
+	background-color: rgb(255, 0, 167);
+	/* color: #c74ace;
+	*/
+}
+.type-wrapper.show .triangle {
+	border-left-color: rgb(255, 0, 167);
+	border-right-color: rgb(255, 0, 167);
+}
+
+/* 公益 */
+.type-wrapper.benefit  .square {
+	background-color: rgb(157, 0, 239);
+	/* color: #fc8f91;
+	*/
+}
+.type-wrapper.benefit .triangle {
+	border-left-color: rgb(157, 0, 239);
+	border-right-color: rgb(157, 0, 239);
+}
+
+/* 赛事 */
+.type-wrapper.competition  .square {
+	background-color: rgb(73, 41, 239);
+	/* color: #ed7b5e;
+	*/
+}
+.type-wrapper.competition .triangle {
+	border-left-color: rgb(73, 41, 239);
+	border-right-color: rgb(73, 41, 239);
+}
+
+/* 聚会 */
+.type-wrapper.party .square {
+	background-color: rgb(0, 190, 238);
+	/* color: #4186fc;
+	*/
+}
+.type-wrapper.party .triangle {
+	border-left-color: rgb(0, 190, 238);
+	border-right-color: rgb(0, 190, 238);
+}
+
+/* 招新 */
+.type-wrapper.attract  .square {
+	background-color: rgb(0, 252, 125);
+	/* color: #f43d3d;
+	*/
+}
+.type-wrapper.attract .triangle {
+	border-left-color: rgb(0, 252, 125);
+	border-right-color: rgb(0, 252, 125);
+}
+
+/* 其他 */
+.type-wrapper.else  .square {
+	background-color: rgb(121, 121, 121);
+	/* color: #8493c9;
+	*/
+}
+.type-wrapper.else .triangle {
+	border-left-color: rgb(121, 121, 121);
+	border-right-color: rgb(121, 121, 121);
+}

@@ -1,8 +1,10 @@
 $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
-// bower:scss
+// bower: scss
 @import "../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 @import "./box/pptbox.scss";
 @import "./box/list.scss";
+@import "./box/events.scss";
+@import "./box/eventIcon.scss";
 // endbower
 * {
     border: 0;
@@ -15,15 +17,19 @@ html {
     margin: 0;
     outline: none;
     border: 0;
-    overflow: hidden;
+    &.fixed-html {
+        overflow: hidden;
+    }
 }
 body {
     padding: 0;
     margin: 0;
     width: 100%;
-    overflow: hidden;
-    min-height: 500px;
-    height: 500px;
+    &.fixed-body {
+        overflow: hidden;
+        min-height: 500px;
+        height: 500px;
+    }
 }
 a, img {
     -webkit-touch-callout: none;
@@ -120,7 +126,11 @@ a, img {
     }
 }
 // animation
-@-webkit-keyframes ani-sec1-swlogo{
-    0% {-webkit-transform:rotateY(180deg);}
-    100% {-webkit-transform:rotateY(0deg);}
+@-webkit-keyframes ani-sec1-swlogo {
+    0% {
+        -webkit-transform: rotateY(180deg);
+    }
+    100% {
+        -webkit-transform: rotateY(0deg);
+    }
 }

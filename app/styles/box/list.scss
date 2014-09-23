@@ -16,33 +16,29 @@ body.list > div.box-wrapper {
 .list-wrapper {
 	ul.list-wrapper-list {
 		list-style-type: none;
+		display: table;
+		width: 100%;
 		li.list-wrapper-item {
-			padding-left: 15px;
-			height: 100px;
-			display: block;
-			border-bottom: 1px solid #DADADA;
+			display: table-row;
+			border-bottom:1px solid #000;
+			span.logo, span.title {
+				display: table-cell;
+				vertical-align: middle;
+			}
 			span.title {
-				float: left;
-				display: inline-block;
-				line-height: 100px;
 				font-size: 30px;
-				margin-left: 15px;
 				overflow: hidden;
-				text-overflow: ellipsis;
-				white-space: nowrap;
+				padding-left: 10px;
+			}
+			span.logo {
+				border-radius: 10px;
+				height: 100px;
+				width: 100px;
+				background-position: center;
+				background-size: 90px;
+				background-repeat: no-repeat;
 			}
 		}
 		margin-bottom: 0px;
 	}
-}
-span.logo {
-	border-radius: 10px;
-	display: inline-block;
-	margin-top: 10px;
-	height: 80px;
-	width: 80px;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	float: left;	
 }

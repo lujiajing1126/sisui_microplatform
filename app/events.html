@@ -1,0 +1,114 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>上外社团联活动列表</title>
+    <meta name="description" content="">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.min.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="../bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+</head>
+<body>
+    <!--[if lt IE 10]>
+    <p class="browsehappy">
+        You are using an <strong>outdated</strong>
+        browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a>
+        to improve your experience.
+    </p>
+    <![endif]-->
+    <div class="header">
+        <h4>上海理工大学活动列表</h4>
+    </div>
+    <div class="events-container"></div>
+    <script type="text/html" id="eventsContent">
+    {{if events.length>0}}
+    {{each events as event i}}
+    <a href="http://xiaoxiao.la/event.html?eid={{event.event.id}}">
+    <div class="event-wrapper">
+        <div class="event event-logo-wrapper">
+            <div class="event-logo" style="background-image:url(/api/event/{{event.event.id}}/poster/load),url('images/1.png');"></div>
+        </div>
+        <div class="event event-type-wrapper">
+                         {{if event.event.category=="讲座"}}
+                            <span class="type-wrapper lecture">
+                                <span class="square">讲</span>
+                                <span class="triangle left"></span>
+                                <span class="triangle right"></span>
+                            </span>
+                            {{else if event.event.category=="演出"}}
+                            <span class="type-wrapper show">
+                                <span class="square">演</span>
+                                <span class="triangle left"></span>
+                                <span class="triangle right"></span>
+                            </span>
+                            {{else if event.event.category=="公益"}}
+                            <span class="type-wrapper benefit">
+                                <span class="square">益</span>
+                                <span class="triangle left"></span>
+                                <span class="triangle right"></span>
+                            </span>
+                            {{else if event.event.category=="赛事"}}
+                            <span class="type-wrapper competition">
+                                <span class="square">赛</span>
+                                <span class="triangle left"></span>
+                                <span class="triangle right"></span>
+                            </span>
+                            {{else if event.event.category=="聚会"}}
+                            <span class="type-wrapper lecture">
+                                <span class="square">聚</span>
+                                <span class="triangle left"></span>
+                                <span class="triangle right"></span>
+                            </span>
+                            {{else if event.event.category=="招新"}}
+                            <span class="type-wrapper attract">
+                                <span class="square">招</span>
+                                <span class="triangle left"></span>
+                                <span class="triangle right"></span>
+                            </span>
+                            {{else}}
+                            <span class="type-wrapper else">
+                                <span class="square">其</span>
+                                <span class="triangle left"></span>
+                                <span class="triangle right"></span>
+                            </span>
+                            {{/if}}
+                        </div>
+        <div class="event event-name-wrapper">
+            <div class="name">{{event.event.name}}</div>
+            <div class="time"><span class="fa fa-clock-o"></span>
+            <span>{{event.event.begin.$date}}</span></div>
+        </div>
+    </div>
+    </a>
+    {{/each}}
+    {{else}}
+    <div class="error">暂无活动</div>
+    {{/if}}
+    </script>
+
+    <!-- build:js({app,.tmp}) scripts/base.js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/artTemplate/dist/template-debug.js"></script>
+    <script src="scripts/lib/moment.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js({app,.tmp}) scripts/events.js -->
+    <script src="scripts/helper.js"></script>
+    <script src="scripts/events.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

@@ -3,8 +3,12 @@
   "private": true,
   "dependencies": {
     "bootstrap-sass-official": "~3.1.0",
+    "fontawesome": "~4.2.0",
     "modernizr": "~2.6.2",
-    "jquery": "~1.11.0"
+    "jquery": "~1.11.0",
+    "parallax":"git@github.com:wagerfield/parallax.git",
+    "artTemplate": "git@github.com:aui/artTemplate.git",
+    "amazeui":"git@github.com:allmobilize/amazeui.git"
   },
   "devDependencies": {}
 }

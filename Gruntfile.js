@@ -7,7 +7,7 @@
 // use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
 
     // Load grunt tasks automatically
     require('load-grunt-tasks')(grunt);
@@ -132,7 +132,7 @@ module.exports = function (grunt) {
             },
             all: [
                 'Gruntfile.js',
-                '<%= config.app %>/scripts/{,*/}*.js',
+                '<%= config.app %>/scripts/**/*.js',
                 '!<%= config.app %>/scripts/vendor/*',
                 'test/spec/{,*/}*.js'
             ]
@@ -193,7 +193,7 @@ module.exports = function (grunt) {
         // Automatically inject Bower components into the HTML file
         bowerInstall: {
             app: {
-                src: ['<%= config.app %>/index.html','<%= config.app %>/pptbox.html','<%= config.app %>/list.html'],
+                src: ['<%= config.app %>{,*/}*.html', ],
                 exclude: ['bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap.js']
             },
             sass: {
@@ -206,9 +206,9 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     src: [
-                        '<%= config.dist %>/scripts/{,*/}*.js',
+                        '<%= config.dist %>/scripts/**/*.js',
                         '<%= config.dist %>/styles/{,*/}*.css',
-                        '<%= config.dist %>/images/{,*/}*.*',
+                        '<%= config.dist %>/images/**/*.*',
                         '<%= config.dist %>/styles/fonts/{,*/}*.*',
                         '<%= config.dist %>/*.{ico,png}'
                     ]
@@ -223,7 +223,7 @@ module.exports = function (grunt) {
             options: {
                 dest: '<%= config.dist %>'
             },
-            html: ['<%= config.app %>/index.html','<%= config.app %>/pptbox.html','<%= config.app %>/list.html']
+            html: ['<%= config.app %>{,*/}*.html', ]
         },
 
         // Performs rewrites based on rev and the useminPrepare configuration
@@ -232,16 +232,16 @@ module.exports = function (grunt) {
                 assetsDirs: ['<%= config.dist %>', '<%= config.dist %>/images']
             },
             html: ['<%= config.dist %>/{,*/}*.html'],
-            css: ['<%= config.dist %>/styles/{,*/}*.css']
+            css: ['<%= config.dist %>/styles/**/*.css']
         },
 
         // The following *-min tasks produce minified files in the dist folder
-        imagemin: {
+       imagemin: {
             dist: {
                 files: [{
                     expand: true,
                     cwd: '<%= config.app %>/images',
-                    src: '**/*.{gif,jpeg,jpg,png}',
+                    src: '**/*.{gif,jpeg,jpg,png,bmp}',
                     dest: '<%= config.dist %>/images'
                 }]
             }
@@ -316,16 +316,17 @@ module.exports = function (grunt) {
                     src: [
                         '*.{ico,png,txt}',
                         '.htaccess',
-                        'images/{,*/}*.webp',
+                        'images/**/*',
                         '{,*/}*.html',
                         'styles/fonts/{,*/}*.*'
                     ]
                 }, {
                     expand: true,
                     dot: true,
+                    flatten: true,
                     cwd: '.',
-                    src: ['bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/*.*'],
-                    dest: '<%= config.dist %>'
+                    src: ['bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/*.*','bower_components/fontawesome/fonts/*.*'],
+                    dest: '<%= config.dist %>/fonts/'
                 }]
             },
             styles: {
@@ -345,7 +346,7 @@ module.exports = function (grunt) {
                 outputFile: '<%= config.dist %>/scripts/vendor/modernizr.js',
                 files: {
                     src: [
-                        '<%= config.dist %>/scripts/{,*/}*.js',
+                        '<%= config.dist %>/scripts/**/*.js',
                         '<%= config.dist %>/styles/{,*/}*.css',
                         '!<%= config.dist %>/scripts/vendor/*'
                     ]
@@ -366,14 +367,14 @@ module.exports = function (grunt) {
             dist: [
                 'sass',
                 'copy:styles',
-                'imagemin',
-                'svgmin'
+                //'imagemin',
+                //'svgmin'
             ]
         }
     });
 
 
-    grunt.registerTask('serve', function (target) {
+    grunt.registerTask('serve', function(target) {
         if (target === 'dist') {
             return grunt.task.run(['build', 'connect:dist:keepalive']);
         }
@@ -387,12 +388,12 @@ module.exports = function (grunt) {
         ]);
     });
 
-    grunt.registerTask('server', function (target) {
+    grunt.registerTask('server', function(target) {
         grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
         grunt.task.run([target ? ('serve:' + target) : 'serve']);
     });
 
-    grunt.registerTask('test', function (target) {
+    grunt.registerTask('test', function(target) {
         if (target !== 'watch') {
             grunt.task.run([
                 'clean:server',
